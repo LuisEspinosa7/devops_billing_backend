@@ -44,6 +44,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @AutoConfigureMockMvc/*allow test only http incoming request layer without start the serve, 
         but starting the full spring application context*/
 public class BasicApplicationTests {
+
+    //Cambio
   
     @Autowired
     private MockMvc mockMvc;
@@ -62,6 +64,7 @@ public class BasicApplicationTests {
             final String jsonContent = mapper.writeValueAsString(obj);
             return jsonContent;
         } catch (Exception e) {
+
             throw new RuntimeException(e);
         }
     }
@@ -71,6 +74,7 @@ public class BasicApplicationTests {
      */
     @Test
     public void testCreate() throws Exception {
+        
         Base64.Encoder encoder = Base64.getEncoder();
         String encoding = encoder.encodeToString((USER + ":" + PASSWORD).getBytes());
         Invoice mockdto = new Invoice();
