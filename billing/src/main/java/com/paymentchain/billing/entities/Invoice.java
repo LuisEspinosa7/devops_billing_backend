@@ -26,5 +26,7 @@ public class Invoice {
    private long customerId;
    private String number;
    private String detail;
-   private double amount;  
+   private double amount;
+   
+   //cambio prueba 4
 }
